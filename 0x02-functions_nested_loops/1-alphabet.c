@@ -1,16 +1,16 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
-* print_alphabet - print lowercase alphabet with c incrementing by 1
-* Return: lowercase alphabet a-z
-*/
+ * print_alphabet - Display small letters to screen
+ */
+
 void print_alphabet(void)
 {
-char c;
-c = 'a';
-while (c <= 'z')
-{
-_putchar (c);
-c++;
+	int l_alpha;
+
+	for (l_alpha = 97; l_alpha <= 122; l_alpha++)
+		_putchar(l_alpha);
+
+	_putchar(10);
 }
-_putchar('\n');
-}
+

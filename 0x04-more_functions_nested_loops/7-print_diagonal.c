@@ -1,22 +1,31 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * print_diagonal - prints a diagnoal (\) line
- * @n: the number of (\) to print
+ * print_diagonal - print stroke
+ * @n: number of space end with stroke
  */
+
 void print_diagonal(int n)
 {
-	int i, b;
+	int i = 0;
 
-	for (i = 1; i  <= n; i++)
+	if (n <= 0)
 	{
-		for (b = 1; b < i; b++)
-		_putchar(' ');
+		_putchar(10);
+		return;
+	}
 
-	_putchar('\\');
-	_putchar('\n');
-}
+	while (i <= n)
+	{
+		if (i > 0)
+		{
+			int x = 1;
 
-if (n <= 0)
-	_putchar('\n');
+			for (; x < i; x++)
+				_putchar(32);
+			_putchar(92);
+			_putchar(10);
+		}
+		i++;
+	}
 }

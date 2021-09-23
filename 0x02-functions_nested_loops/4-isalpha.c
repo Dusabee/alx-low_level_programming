@@ -1,14 +1,19 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
-* _isalpha - checks for a upper case or lower case letter
-* @c: checks for aphabetic characters
-* Return: 1 if c, 0 for evertyhing else
-*/
+ * _isalpha - checks for uppercase and lowercase
+ * @c: accepts integer both signed and non signed and relates it to ascii
+ * Return: if 1 then error and quits program
+ */
+
 int _isalpha(int c)
 {
-if (c >= 'a' && c <= 'z')
-return (1);
-else if (c >= 'A' && c <= 'Z')
-return (1);
-return (0);
+	int alpha, alpha1;
+
+	for (alpha = 97, alpha1 = 65; alpha <= 122 && alpha1 <= 90; alpha++, alpha1++)
+	{
+		if (c == alpha || c == alpha1)
+			return (1);
+	}
+	return (0);
 }

@@ -1,17 +1,24 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
-* main - prints Holberton
-*
-* Return: Always 0 (Success)
-*/
+ * main - This entry point
+ *
+ * Return: On success,  always 0
+ *
+ * Description: This is used to print
+ */
+
 int main(void)
 {
-int i = 0;
-char s[] = "Holberton\n";
-while (s[i])
-{
-_putchar (s[i]);
-i++;
-}
-return (0);
+	char hol_sch[] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r', '\n'};
+	int length, count = 0;
+
+	length = sizeof(hol_sch) / sizeof(hol_sch[0]);
+
+	for (; count < length; count++)
+	{
+		_putchar(hol_sch[count]);
+	}
+
+	return (0);
 }
