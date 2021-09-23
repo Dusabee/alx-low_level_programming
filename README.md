@@ -1,1 +1,1 @@
-This is all about c programming. This code practice for compiling C from Bash on Linux distro terminal. Using Holberton school coddy style -Betty Linter. the codes are run and checked and compiled. Comiplation is generally done with gcc compiler. C programming is fun.
+This is all about c programming. This code practice for compiling C from Bash on Linux distro terminal. Using coddy style -Betty Linter. The codes are run and checked and compiled. Comiplation is generally done with gcc compiler. C programming is fun.
