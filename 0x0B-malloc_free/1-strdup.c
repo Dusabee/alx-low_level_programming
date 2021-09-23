@@ -1,46 +1,37 @@
 #include "main.h"
 
 /**
- * _strdup - copy string and manipulate
- * @str: buffers into allocated memory
- * Return: returns string already manipulated
- */
+* _strdup - returns a pointer to a newly allocated
+*space in memory, which contains a copy of the
+*string given as a parameter.
+*@str:String to be copied
+*
+*Return: NULL in case of error, pointer to allocated
+*space
+*/
 
 char *_strdup(char *str)
 {
-	char *sstr;
-	int i = 0;
+	char *cpy;
+	int index, len;
 
-	sstr = malloc(sizeof(char) * _strlen(str) + 1);	
+	if (str == NULL)
+		return (NULL);
 
-	if (!str || !sstr)
-		return (0);
+	for (index = 0; str[index]; index++)
+		len++;
+	cpy = malloc(sizeof(char) * (len + 1));
 
-	for (; str[i] != 0; i++)
-		*(sstr + i) = *(str + i);
+	if (cpy == NULL)
+		return (NULL);
 
-	sstr[i] = 0;
-	return (sstr);
-}
-
-/**
- * _strlen - count strings
- * @s: - buffer s
- * Return: length and count string
- */
-
-int _strlen(char *s)
-{
-	int count = 0;
-
-	if (!s)
-		return (0);
-
-	while (*s != '\0')
+	for (index = 0; str[index]; index++)
 	{
-		count++;
-		s++;
+		cpy[index] = str[index];
 	}
 
-	return (count);
+	cpy[len] = '\0';
+
+	return (cpy);
+
 }
