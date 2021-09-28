@@ -1,99 +1,29 @@
 #include <stdio.h>
-#include "main.h"
-
+#include <stdlib.h>
+#include <ctype.h>
 /**
- * main - start of program for multiplication by user
- *
- * @argc: number of arguments
- * @argv: entered numbers by use
- *
- * Return: on success (0), otherwise (1) for failure
+ * main - adds positive numbers.
+ * @argc: number of command line arguments.
+ * @argv: array that contains the program command line arguments.
+ * Return: 0 - success.
  */
-
-int main(int __attribute__((unused)) argc, char __attribute__((unused)) **argv)
+int main(int argc, char *argv[])
 {
-	int rslt = 0;
+	int i, j, add = 0;
 
-	argc -= 1;
-
-	while (argc > 0)
+	for (i = 1; i < argc; i++)
 	{
-		if (_isdigit(argv[argc]) == 1)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			rslt += _atoi(argv[argc]);
-			argc--;
-		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
-	}
-	printf("%d\n", rslt);
-
-	return (0);
-}
-
-/**
- * _atoi - convert string numbers to integers noting the negative sign
- * @s: string stored
- * Return: converted string of numbers
- */
-
-int _atoi(char *s)
-{
-	int x = 1, unit = 10;
-
-	while (s)
-	{
-		if (*s == 0)
-			return (0);
-
-		if (*s == 45)
-		{
-			x *= -1;
-			s++;
-		}
-
-		if (*s >= 48 && *s <= 57)
-		{
-			x *= (*s - 48);
-again:
-			if (s[1] >= 48 && s[1] <= 57)
+			if (!isdigit(argv[i][j]))
 			{
-				s++;
-				x *= unit;
-				if (x > 0)
-					x += (*s - 48);
-				else
-					x += ((*s - 48) * -1);
-				goto again;
+				printf("Error\n");
+				return (1);
 			}
-			else
-				return (x);
 		}
-		if (*s != 45)
-			s++;
+		add += atoi(argv[i]);
 	}
+	printf("%d\n", add);
 	return (0);
 }
 
-/**
- * _isdigit - checks for digits
- * @s: ascii character to validate with
- * Return: 1 for true, 0 for false
- */
-
-int _isdigit(char *s)
-{
-	int i = 0;
-
-	for (; *s != 0; s++)
-	{
-		if (*s >= 48 && *s <= 57)
-			i++;
-		else
-			return (0);
-	}
-	return (1);
-}
