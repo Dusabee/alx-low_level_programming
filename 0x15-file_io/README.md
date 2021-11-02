@@ -1,4 +1,4 @@
-# 0x15. C - File I/O
+# 0x15. C - File I/O :tada: :rocket:
 
 ## Requirements
 ## General
@@ -20,4 +20,4 @@
 - Don’t forget to push your header file
 - All your header files should be include guarded
 - Tip: always prefer using symbolic constants (POSIX) vs numbers when it makes sense. For instance read(STDIN_FILENO, ... vs read(0, ...
-``
+```
