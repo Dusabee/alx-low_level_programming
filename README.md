@@ -35,6 +35,6 @@ algorithm section .
 * [0x18. C - Dynamic libraries](./0x18-dynamic_libraries)
 * [0x19. C - Stacks, Queues - LIFO, FIFO](https://github.com/Dusabee/monty)
 * [0x1A. C - Hashtables](./0x1A-hash_tables)
-* [0x1B. C - Sorting algorithms](./0x1B-sorting_algorithms)
+* [0x1B. C - Sorting algorithms](https://github.com/Dusabee/sorting_algorithms)
 * [0x1C. C - Makefiles](./0x1C-makefiles)
-* [0x1D. C - Binary trees](https://github.com/uDusabee/binary_trees)
+* [0x1D. C - Binary trees](https://github.com/Dusabee/binary_trees)
